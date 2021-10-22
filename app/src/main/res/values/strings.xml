@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ChartApp</string>
+    <string name="description">Description</string>
+    <string name="line">Line</string>
+    <string name="xvalue">xValue</string>
+    <string name="yvalue">yValue</string>
+    <string name="pievalue">pieValue</string>
+</resources>

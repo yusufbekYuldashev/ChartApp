@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/chartFragment">
+
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.yusufbek.chartapp.ui.chart.ChartFragment"
+        android:label="ChartFragment" >
+        <action
+            android:id="@+id/action_chartFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.yusufbek.chartapp.ui.list.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="chartType"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.yusufbek.chartapp.ui.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="chart"
+            app:argType="com.yusufbek.chartapp.localdb.ChartDataEntity" />
+    </fragment>
+</navigation>
